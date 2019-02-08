@@ -1,0 +1,33 @@
+{
+	"type": "record",
+	"namespace": "com.test",
+	"name": "list",
+	"fields": [{
+		"name":"listOfBck","type":
+		{"type":"array","items":
+			{
+				"type":			"record",
+				"namespace":	"com.test",
+				"name":			"bck",
+				"fields": [
+					{"name": "accountid","type": "string"},
+					{"name":"amendmentpositionid","type": "int"},
+					{"name":"booking","type":
+						{"type":"array","items":
+							{"namespace":"com.test",
+								"name":"bkkk",
+								"type":"record",
+								"fields": [
+									{"name":"accountid","type":"string"},{"name":"clientid","type":"int"},
+									{"name":"clientname","type":"string"},{"name":"exerciseid","type":"int"},
+									{"name":"hedgeid","type":"int"},{"name":"originatingpositionid","type":"int"},
+									{"name":"positionid","type":"int"},{"name":"relatedpositionid","type":"int"}
+								]
+							}
+						}
+					}
+				]
+			}
+		}
+	}]
+}
